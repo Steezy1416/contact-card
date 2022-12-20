@@ -10,10 +10,13 @@ import Dog from '../images/dog.png'
 import {Tooltip, Toast, Popover} from "bootstrap"
 import "bootstrap/dist/css/bootstrap.min.css"
 
-import { initDb } from "./database"
+import { getDb, initDb, postDb } from "./database"
 
 window.addEventListener("load", () => {
     initDb()
+    getDb()
+    postDb("Lernantino", "learnantino@test.com", 8186601234, "Bear")
+    getDb()
     document.getElementById("logo").src = Logo
     document.getElementById("bearThumbnail").src = Bear
     document.getElementById("dogThumbnail").src = Dog
